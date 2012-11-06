@@ -12,4 +12,5 @@
 = f.text_area :description
 %p
 = f.label :published_at, t(:published_at)
-= f.input :published_at, :as => :string, :input_html => { :class => 'jquery-ui-date'}
+%p
+= f.datetime_select :published_at
