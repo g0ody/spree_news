@@ -4,14 +4,16 @@
 
 %table.index#listing_posts
   %thead
-    %th Name
-    %th Text
+    %th Title
+    %th Subtitle
+    %th Description
     %th
     %th
   %tbody
     - @posts.each do |post|
       %tr
         %td= link_to post.title, object_url(post)
+        %td= post.subtitle.html_safe
         %td= post.description.html_safe
         %td= link_to_edit post
         %td= link_to_delete post

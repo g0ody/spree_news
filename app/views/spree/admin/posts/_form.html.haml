@@ -3,11 +3,13 @@
 %p
 = f.text_field :title
 %p
+= f.label :subtitle, t(:subtitle)
+%p
+= f.text_field :subtitle
+%p
 = f.label :description, t(:description)
 %p
 = f.text_area :description
 %p
 = f.label :published, t(:published)
-%p
 = f.check_box :published
-

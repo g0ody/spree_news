@@ -3,8 +3,8 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_news'
   s.version     = '0.1.0'
-  s.summary     = 'Adds a Javascript enabled scrolling news feed ticker wherever you call it'
-  s.description = 'Provides an Admin view to create/edit posts which will be shown on the home page in a scrolling news ticker window below the products listing.'
+  s.summary     = 'Adds  anews field, that show a max of 3 news entries'
+  s.description = 'Provides an Admin view to create/edit posts which will be shown on the home page.'
   s.required_ruby_version = '>= 1.9.2'
 
   s.author            = 'JD Warren'
