@@ -1,6 +1,6 @@
 - if Spree::Post.all.any?
   .news
-    - Spree::Post.published.order("published_at DESC").limit(3).each do |post|
+    - Spree::Post.published.limit(3).each do |post|
       %h5= post.title
       %h6= post.subtitle
       = post.description

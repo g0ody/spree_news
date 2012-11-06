@@ -8,6 +8,8 @@ class Spree::Post < ActiveRecord::Base
 
 	scope :published, -> { where("published_at <= ?", DateTime.now) }
 
+	default_scope { order("published_at DESC") }
+
 	before_create :set_published_at_to_now
 
 	def set_published_at_to_now

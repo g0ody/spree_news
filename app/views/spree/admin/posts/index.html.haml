@@ -10,7 +10,7 @@
     %th
     %th
   %tbody
-    - @posts.order("published_at DESC").each do |post|
+    - @posts.each do |post|
       %tr
         %td= link_to post.title, object_url(post)
         %td= post.subtitle.html_safe
