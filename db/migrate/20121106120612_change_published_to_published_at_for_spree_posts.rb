@@ -1,4 +1,4 @@
-class RemovePublishedFromSpreePosts < ActiveRecord::Migration
+class ChangePublishedToPublishedAtForSpreePosts < ActiveRecord::Migration
   def change
     remove_column :spree_posts, :published
     add_column :spree_posts, :published_at, :datetime
