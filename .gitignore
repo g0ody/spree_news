@@ -10,3 +10,4 @@ nbproject
 spec/dummy
 
 public/
+Gemfile.lock
