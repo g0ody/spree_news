@@ -5,6 +5,7 @@
 %h4= "Subtitle: #{@post.subtitle}"
 %h4= t(:description)
 = @post.description
+%h4= "Published at: #{@post.published_at}"
 
 %p
 = link_to_edit @slide, :class => 'edit_slide'

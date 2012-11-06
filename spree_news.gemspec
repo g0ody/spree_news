@@ -18,5 +18,4 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'spree_core'
   s.add_dependency 'haml'
-  s.add_dependency 'ckeditor-rails'
 end

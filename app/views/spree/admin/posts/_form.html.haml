@@ -11,5 +11,5 @@
 %p
 = f.text_area :description
 %p
-= f.label :published, t(:published)
-= f.check_box :published
+= f.label :published_at, t(:published_at)
+= f.input :published_at, :as => :string, :input_html => { :class => 'jquery-ui-date'}

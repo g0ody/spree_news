@@ -11,6 +11,5 @@ else
 end
 
 gem 'haml'
-gem 'ckeditor-rails'
 
 gemspec

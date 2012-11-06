@@ -1,2 +1,2 @@
 //= require admin/spree_core
-//= require ckeditor/ckeditor
+//= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js'
