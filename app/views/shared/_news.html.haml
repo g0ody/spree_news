@@ -1,4 +1,7 @@
 - if Spree::Post.all.any?
   .news
     - Spree::Post.published.limit(3).each do |post|
-      = render 'post', :post => post
+      %h5= post.title
+      %h6= post.subtitle
+      = post.description
+      %p
