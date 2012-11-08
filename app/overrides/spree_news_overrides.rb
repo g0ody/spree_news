@@ -1,7 +1,7 @@
 Deface::Override.new(:virtual_path => "spree/layouts/admin",
                      :name => "news_admin_tab",
                      :insert_bottom => "[data-hook='admin_tabs']",
-                     :text => "<%= tab(t('post.header')) %>",
+                     :text => "<%= tab(:posts) %>",
                      :disabled => false)
 
 Deface::Override.new(:virtual_path => "spree/home/index",
