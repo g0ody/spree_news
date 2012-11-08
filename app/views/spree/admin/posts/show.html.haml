@@ -1,11 +1,9 @@
-%h1= "Showing News Post: #{@post.title}"
-%p
 
-%h4= "Title: #{@post.title}"
-%h4= "Subtitle: #{@post.subtitle}"
-%h4= t(:description)
+%h4= "#{t('post.title')}: #{@post.title}"
+%h4= "#{t('post.subtitle')}: #{@post.subtitle}"
+%h4= t('post.description')
 = @post.description
-%h4= "Published at: #{@post.published_at}"
+%h4= "#{t('post.published_at')}: #{@post.published_at}"
 
 %p
 = link_to_edit @slide, :class => 'edit_slide'

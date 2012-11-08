@@ -1,12 +1,12 @@
 = render :partial => 'spree/admin/shared/configuration_menu'
-%h1 Posts
-.new-post= button_link_to 'New Post', new_object_url, :icon => 'add', :id => 'admin_new_post_link'
+%h1 t('post.header')
+.new-post= button_link_to t('post.create'), new_object_url, :icon => 'add', :id => 'admin_new_post_link'
 
 %table.index#listing_posts
   %thead
-    %th Title
-    %th Subtitle
-    %th Published_at
+    %th t('post.title')
+    %th t('post.subtitle')
+    %th t('post.published_at')
     %th
     %th
   %tbody
