@@ -13,7 +13,7 @@ class Spree::Admin::PostsController < Spree::Admin::ResourceController
   end
 
   def create
-    @post = Spree::Post.new(params[:post])
+    @post = Spree::Post.create(params[:post])
     if @post.save
       flash[:notice] = "Post saved successfully"
       redirect_to admin_posts_path

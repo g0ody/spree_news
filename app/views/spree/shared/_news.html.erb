@@ -4,7 +4,11 @@
   	  <ul>
 	  	  <h5><%= post.title %></h5>
 	  	  <h6><%= post.subtitle %></h6>
-	  	  <%#= image_tag(post.image.url(:original), :alt => @post.name) %>
+        <% if post.picture.file? %>
+          <ul>
+  	  	    <%= image_tag post.picture.url(:original) %>
+          </ul>
+        <% end %>
 	  	  <span> <%= post.description %> </span>
         <br/>
   	  </ul>
