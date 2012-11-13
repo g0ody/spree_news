@@ -1,0 +1,13 @@
+<% if Spree::Post.all.any? %>
+  <div class="news">
+  	<% Spree::Post.published.limit(3).each do |post| %>
+  	  <ul>
+	  	  <h5><%= post.title %></h5>
+	  	  <h6><%= post.subtitle %></h6>
+	  	  <%#= image_tag(post.image.url(:original), :alt => @post.name) %>
+	  	  <span> <%= post.description %> </span>
+        <br/>
+  	  </ul>
+    <% end %>
+  </div>
+<% end %>

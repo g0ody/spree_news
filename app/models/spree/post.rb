@@ -6,6 +6,12 @@ class Spree::Post < ActiveRecord::Base
 
 	attr_accessible :description, :title, :subtitle, :published_at
 
+	#has_attached_file :image,
+    #  :default_style => :original,
+    #  :url => '/spree/post/:id/:style/:basename.:extension',
+    #  :path => ':rails_root/public/spree/post/:id/:style/:basename.:extension',
+    #  :default_url => '/assets/default_taxon.png'
+
 	scope :published, -> { where("published_at <= ?", DateTime.now) }
 
 	default_scope { order("published_at DESC") }

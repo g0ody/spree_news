@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_news'
-  s.version     = '0.1.0'
+  s.version     = '1.2.0'
   s.summary     = 'Adds  anews field, that show a max of 3 news entries'
   s.description = 'Provides an Admin view to create/edit posts which will be shown on the home page.'
   s.required_ruby_version = '>= 1.9.2'
@@ -17,5 +17,4 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_core'
-  s.add_dependency 'haml'
 end

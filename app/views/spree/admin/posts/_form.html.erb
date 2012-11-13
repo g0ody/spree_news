@@ -1,0 +1,27 @@
+<div data-hook="admin_inside_news_form">
+  <%= f.field_container :title do %>
+    <%= f.label :title, t('post.title') %> <span class="required">*</span><br />
+    <%= text_field :post,  :title %>
+  <% end %>
+
+  <%= f.field_container :subtitle do %>
+    <%= f.label :subtitle, t('post.subtitle') %>
+    <%= text_field :post, :subtitle %>
+  <% end %>
+
+  <%= f.field_container :description do %>
+    <%= f.label :description, t('post.description') %><br />
+    <%= f.text_area :post, :description %>
+  <% end %>  
+
+  <%#= f.field_container :image do %>
+    <%#= f.label :image, t(:image) %>
+    <%#= f.file_field :image %>
+  <%# end %>
+
+  <%= f.field_container :published_at do %>
+    <%= f.label :published_at, t('post.published_at') %><br />
+    <%= f.datetime_select :post, :published_at %>
+  <% end %>  
+
+</div>

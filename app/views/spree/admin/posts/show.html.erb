@@ -1,0 +1,11 @@
+<div data-hook="admin_show_news_form">
+  <h4><%= "#{t('post.title')}: #{@post.title}" %></h4>
+  <h4><%= "#{t('post.subtitle')}: #{@post.subtitle}" %></h4>
+  <h4><%= t('post.description') %></h4>
+  <%= post.description %>
+  <h4><%= "#{t('post.published_at')}: #{@post.published_at}" %></h4>
+  <br /><br />
+  <%= link_to_with_icon 'edit', t(:edit), edit_admin_post_path, :id => 'admin_post_link' %>
+  <%= t(:or) %>
+  <%= link_to t(:back), collection_url %>
+</div>

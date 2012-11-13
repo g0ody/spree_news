@@ -1,0 +1,31 @@
+<% = render :partial => 'spree/admin/shared/configuration_menu' %>
+<div class="toolbar" data-hook="toolbar">
+  <ul class="actions">
+    <li id='new-post'>
+      <%= button_link_to t('post.create'), new_object_url, :icon => 'add', :id => 'admin_new_post_link' %>
+    </li>
+  </ul>
+  <br class="clear" />
+</div>
+
+<table class="index">
+  <tr data-hook="admin_sposts_index_headers">
+    <th><%= t('post.title') %></th>
+    <th><%= t('post.subtitle') %></th>
+    <th><%= t('post.published_at') %></th>
+    <th data-hook="admin_posts_index_header_actions">
+      <%= t(:action) %>
+    </th>
+  </tr>
+  <% @posts.each do |post| %>
+    <tr id="<%= spree_dom_id post %>" data-hook="admin_posts_index_rows">
+      <td><%= link_to post.try(:title), edit_admin_post_path(post) %></td>
+      <td><%= post.subtitle.html_safe %></td>
+      <td><%= post.published_at %></td>
+      <td class="actions" data-hook="admin_shipments_index_row_actions">
+        <%= link_to_with_icon 'edit', t(:edit), edit_admin_post_url(post) %>
+        <%= link_to_delete post %>
+      </td>
+    </tr>
+  <% end %>
+</table>
