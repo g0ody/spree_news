@@ -7,5 +7,5 @@ Deface::Override.new(:virtual_path => "spree/layouts/admin",
 Deface::Override.new(:virtual_path => "spree/home/index",
                      :name => "index_news_partial",
                      :insert_after => "[data-hook='homepage_products']",
-                     :partial => "shared/news",
+                     :partial => "spree/shared/news",
                      :disabled => false)
