@@ -6,7 +6,7 @@
 	  	  <h6><%= post.subtitle %></h6>
         <% if post.picture.file? %>
           <ul>
-  	  	    <%= image_tag post.picture.url(:original) %>
+  	  	    <%= image_tag post.picture.url %>
           </ul>
         <% end %>
 	  	  <span> <%= post.description %> </span>
