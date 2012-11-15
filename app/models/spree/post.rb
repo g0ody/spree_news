@@ -10,7 +10,7 @@ class Spree::Post < ActiveRecord::Base
   has_attached_file :picture,
       :styles => { :normal => '626x300#' },
       :default_style => :normal,
-      :url => '/spree/post/:id/:style/:basename.:extension',
+      :url => ':s3_eu_url',
       :path => ':rails_root/public/spree/post/:id/:style/:basename.:extension',
       :default_url => '/assets/default_post.png'
 
