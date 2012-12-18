@@ -14,6 +14,11 @@
     <%= f.text_area :description %>
   <% end %>  
 
+  <%= f.field_container :link do %>
+    <%= f.label :link, t('post.link') %>
+    <%= text_field :post, :link %>
+  <% end %>
+
   <%= f.field_container :picture do %>
     <%= f.label :picture, t(:picture) %>
     <%= f.file_field :picture %>

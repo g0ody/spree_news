@@ -5,7 +5,7 @@ class Spree::Post < ActiveRecord::Base
   validates_presence_of :published_at
   validate :no_attachment_errors
 
-  attr_accessible :description, :title, :subtitle, :published_at, :picture
+  attr_accessible :description, :title, :subtitle, :published_at, :picture, :link
 
   has_attached_file :picture,
       :styles => { :normal => '626x300#' },
