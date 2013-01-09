@@ -1,50 +1,28 @@
-class Spree::Admin::PostsController < Spree::Admin::ResourceController
+module Spree
+  module Admin
+    class PostsController < ResourceController
 
-  def index
-    @posts = Spree::Post.all
-  end
+      def index
+        @posts = Post.all
+        respond_with(@coupons) do |format|
+          format.html
+          format.json { render :json => json_data }
+        end
+      end
 
-  def show
-    @post = Spree::Post.find(params[:id])
-  end
+      def show
+        redirect_to( :action => :edit )
+      end
 
-  def new
-    @post = Spree::Post.new
-  end
+      def destroy
+            @post = Post.find(params[:id])
+            @post.delete
 
-  def create
-    @post = Spree::Post.create(params[:post])
-    if @post.save
-      flash[:notice] = "Post saved successfully"
-      redirect_to admin_posts_path
-    else
-      flash[:alert] = "There was an error saving your post"
-      redirect_to :back
+            respond_with(@post) do |format|
+              format.html { redirect_to collection_url }
+              format.js  { render_js_for_destroy }
+            end
+      end
     end
   end
-
-  def edit
-    @post = Spree::Post.find(params[:id])
-  end
-
-  def update
-    @post = Spree::Post.find(params[:id])
-    if @post.update_attributes(params[:post])
-      flash[:notice] = "Post saved successfully"
-      redirect_to admin_posts_path
-    else
-      flash[:alert] = "There was an error saving your post"
-      redirect_to :back
-    end
-  end
-
-  def destroy
-    @post = Spree::Post.find(params[:id])
-    if @post.destroy
-      redirect_to admin_posts_path
-    else
-      redirect_to :back
-    end
-  end
-
 end
